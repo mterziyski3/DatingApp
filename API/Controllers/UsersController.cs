@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using API.Entities;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Microsoft.EntityFrrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
@@ -27,7 +27,7 @@ namespace API.Controllers
 
         // api/users/3
         [HttpGet("{id}")]
-        public async Task<ActionResult<AppUser>ToListAsync GetUser(int id)
+        public async Task<ActionResult<AppUser>> GetUser(int id)
         {
             return await _context.Users.FindAsync(id);
         }
